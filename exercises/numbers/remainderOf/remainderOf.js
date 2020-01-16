@@ -15,20 +15,20 @@
  * @param {number} num The input number
  * @returns {boolean} True if num is even and false otherwise
  */
-function remainderOf(num) {
-  /*
-    This is your job. :)
 
-    If you're not sure, step out of the code and use pen + paper. Start
-    with simple examples and pay attention to the process you carry out.
-  */
+ function remainderOf(num,div) {
+let answer = num/div; 
+let whole = parseInt(answer);
+let final = whole*div;
+let remainder = num-final;
+
+
+if (remainder===0) { 
+    return true; 
+}else{
+    return false; 
 }
+ }
 
-if (require.main === module) {
-  console.log('Running sanity checks for remainderOf');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
-}
-
-module.exports = remainderOf;
+ console.log(remainderOf(10,3));
+ console.log(remainderOf(10,2));
