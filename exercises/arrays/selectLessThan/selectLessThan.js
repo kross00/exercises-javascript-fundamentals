@@ -1,3 +1,4 @@
+
 /**
  * Given an array of numbers and a treshold value, returns a new array
  * consisting of only those numbers strictly less than the threshold.
@@ -17,14 +18,19 @@
  *  strictly less than the threshold
  */
 function selectLessThan(array, threshold) {
-  // This is your job. :)
+  let count = [];
+  for (let i of array){
+      if(i<threshold){
+          count.push(i);
+      }
+  }
+return count; 
 }
 
 if (require.main === module) {
-  console.log('Running sanity checks for selectLessThan:');
+    console.log('Running sanity checks for selectLessThan:');
+  console.log(selectLessThan([1,2,3,4,5],4))
 
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
-}
-
-module.exports = selectLessThan;
+  }
+  
+  module.exports = selectLessThan;
