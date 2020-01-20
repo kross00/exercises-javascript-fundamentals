@@ -12,11 +12,20 @@
  * @returns {number} The count of even integers in the array
  */
 function countOdds(array) {
-  // This is your job. :)
+  let count = 0;
+for(let i of array) {
+    if (i%2!=0){
+        count++;
+    }
+    
+}
+return count; 
 }
 
 if (require.main === module) {
-  console.log('Running sanity checks for countOdds:');
-}
+    console.log('Running sanity checks for countOdds:');
+    console.log(countOdds([1,2,3,4,5,])==3); 
+  }
 
-module.exports = countOdds;
+  
+  module.exports = countOdds;
