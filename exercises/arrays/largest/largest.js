@@ -20,15 +20,7 @@ function largest(array) {
 
 if (require.main === module) {
   console.log('Running sanity checks for largest:');
-
-  console.log(largest([1, 2, 3]) === 3);
-  console.log(largest([0, -100, 50, -200]) === 50);
-  console.log(largest([-200, -400, -100, -300]) === -100);
-  console.log(largest([0]) === 0);
-  console.log(largest([1]) === 1);
-  console.log(largest([-1]) === -1);
-  console.log(largest([11, 11, 11]) === 11);
-  console.log(largest([-22, -11, -22]) === -11);
+console.log(largest([1,2,3,4,5,7,1,2,3]));
 }
 
-module.exports = largest;
+module.exports = largest; 
