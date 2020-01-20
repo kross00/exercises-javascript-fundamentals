@@ -14,14 +14,19 @@
  * @returns {number[]} A new array consisting of all the odd numbers in the input array
  */
 function selectOdds(array) {
-  // This is your job. :)
+  let count = [];
+  for (let i of array){
+      if(i%2!=0){
+          count.push(i);
+  }
+  }
+  return count;
 }
 
 if (require.main === module) {
-  console.log('Running sanity checks for selectOdds:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
-}
-
-module.exports = selectOdds;
+    console.log('Running sanity checks for selectOdds:');
+  console.log(selectOdds([1,2,3,4,5,29]));
+   
+  }
+  
+  module.exports = selectOdds;
