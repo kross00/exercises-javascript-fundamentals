@@ -7,14 +7,20 @@
  * @returns {number} The shortest string in the array
  */
 function shortest(array) {
-  // This is your job. :)
+  let shortestSoFar = array[0];
+  for(let element of array){
+      if(element.length < shortestSoFar){
+          shortestSoFar = element;
+      }
+  }
+  return shortestSoFar;
 }
 
 if (require.main === module) {
-  console.log('Running sanity checks for shortest:');
+    console.log('Running sanity checks for shortest:');
+  console.log(shortestSoFar(['hello','hey','hi']));
 
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
-}
-
-module.exports = shortest;
+  }
+// i could not get this one to function 
+  
+  module.exports = shortest;
