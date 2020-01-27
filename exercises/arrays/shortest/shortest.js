@@ -9,7 +9,7 @@
 function shortest(array) {
   let shortestSoFar = array[0];
   for(let element of array){
-      if(element.length < shortestSoFar){
+      if(element.length < shortestSoFar.length){
           shortestSoFar = element;
       }
   }
@@ -18,9 +18,11 @@ function shortest(array) {
 
 if (require.main === module) {
     console.log('Running sanity checks for shortest:');
-  console.log(shortestSoFar(['hello','hey','hi']));
+  
+    console.log(shortest(['hello','hey','hi']));
 
   }
-// i could not get this one to function 
   
   module.exports = shortest;
+
+// it works now :D 
