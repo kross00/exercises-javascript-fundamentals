@@ -14,26 +14,25 @@
  * @returns {boolean} True if num is even and false otherwise
  */
 function isEven(num) {
-  // Hint: See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder
-  return _____;
-}
+ if(num>0){
+   return true;
+ }else{
+   return false;
+ }
+ }
 
-if (require.main === module) {
-  let evenNumbers = [2, 20, 100, 768];
+ if (require.main === module) {
+  //let evenNumbers = [2, 20, 100, 768];
 
   console.log('Running sanity checks for isEven');
 
-  console.log(isEven(0) === true);
+ // console.log(isEven(0) === true);
 
-  // These should all be even
-  for (let num of evenNumbers) {
-    console.log(isEven(num) === true);
+  console.log(isEven(24));
+  console.log(isEven(8));
+  console.log(isEven(-81));
+  
   }
 
-  // If num is even then num + 1 is odd
-  for (let num of evenNumbers) {
-    console.log(isEven(num + 1) === false);
-  }
-}
 
 module.exports = isEven;
