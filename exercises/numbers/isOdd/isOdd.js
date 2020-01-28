@@ -14,26 +14,26 @@
  * @returns {boolean} True if num is even and false otherwise
  */
 function isOdd(num) {
-  // Hint: See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder
-  return _____;
-}
+    if(num%2!=0){
+        return true;
+    }else{
+        return false; 
+    }
+    }
+  
+  
+  if (require.main === module) {
+    //let oddInputs = [1, 19, 99, 767];
+  
+    console.log('Running sanity checks for isOdd');
+  
+console.log(isOdd(8));
+console.log(isOdd(81));
+console.log(isOdd(24)); 
 
-if (require.main === module) {
-  let oddInputs = [1, 19, 99, 767];
 
-  console.log('Running sanity checks for isOdd');
-
-  console.log(isOdd(0) === false);
-
-  // These should all be odd
-  for (let num of oddInputs) {
-    console.log(isOdd(num) === true);
-  }
-
-  // If num is odd then num + 1 is even
-  for (let num of oddInputs) {
-    console.log(isOdd(num + 1) === false);
-  }
-}
-
-module.exports = isOdd;
+    }
+  
+  
+  module.exports = isOdd;
+  
