@@ -14,12 +14,8 @@
  * @returns {boolean} True if num is even and false otherwise
  */
 function isEven(num) {
- if(num%2===0){
-   return true;
- }else{
-   return false;
- }
- }
+  return num % 2 === 0;
+}
 
  if (require.main === module) {
   //let evenNumbers = [2, 20, 100, 768];
